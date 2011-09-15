@@ -1,0 +1,277 @@
+body {
+	color: #000000;
+	background: #FFFFFF;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+blockquote {
+	margin: 0 30px 15px 30px;
+}
+p {
+	line-height: 1.2em;
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+small {
+	line-height: 1.2em;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+h1 {
+	line-height: 1.2em;
+	font-size: 22px;
+	margin: 7px 0 7px 0;
+	font-weight: bold;
+}
+h2 {
+	line-height: 1.2em;
+	font-size: 18px;
+	margin: 7px 0 7px 0;
+	font-weight: bold;
+}
+h3 {
+	line-height: 1.2em;
+	font-size: 14px;
+	margin: 7px 0 7px 0;
+	font-weight: bold;
+}
+ol, ul {
+	list-style: none;
+	margin: 0 0 10px 30px;
+}
+ol li {
+	line-height: 1.2em;
+	font-size:14px;
+	margin-bottom: 5px;
+	list-style: decimal;
+}
+ul li {
+	line-height: 1.2em;
+	font-size:14px;
+	margin-bottom: 5px;
+	list-style: none;
+}
+table td {
+	line-height: 1.2em;
+	font-size: 14px;
+	padding: 5px;
+}
+
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+a, a:visited {
+	color: #558bdb;	
+}
+a:hover {
+	text-decoration: none;
+	color: #558bdb;
+}
+textarea, input {
+	border: solid 1px #000000;
+}
+
+/*** Container Styles (in order of appearance in code) ***/
+
+#main {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#wrapper {
+	position: relative;
+	text-align: left;
+	width: 100%;
+	margin: 20px 0 20px 0;
+	border-left: solid 1px #cccccc;
+	border-right: solid 1px #cccccc;
+}
+#header {
+	position: relative;
+	width: 960px;
+	height: 150px;
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+}
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#navigation_box {
+	position: absolute;
+	bottom: 0;
+	left: 5px;
+}
+#navigation {
+	list-style: none;
+	margin: 0;
+}
+#navigation li {
+	float: left;
+	padding: 2px 7px 3px 7px;
+	text-align: right;
+	font-weight: bold;
+}
+#navigation li a {
+	color: #000000;
+	font-weight: bold;
+	text-decoration: none;
+}
+#navigation li a:hover {
+	color: #666666;
+}
+#navigation .current_page_item, #navigation .current_page_parent {
+	float: left;
+	padding: 2px 7px 3px 7px;
+}
+#navigation .current_page_item a, #navigation .current_page_parent a {
+	color: #666666 !important;
+	font-weight: bold;
+	text-decoration: none;
+}
+#subnav_box {
+}
+#subnav_box ul {
+	margin-left: 10px;
+	padding-left: 0;
+}
+#subnav_box li {
+	color: #000000;
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: 3px;
+}
+#subnav_box li:hover {
+	color: #666666 !important;
+}
+#subnav_box .page_item a {
+	color: #000000;
+}
+#subnav_box .page_item a:hover {
+	color: #666666 !important;
+}
+#subnav_box .current_page_item a {
+	color: #666666 !important;
+}
+#subnav_box .children {
+	
+}
+#subnav_box .children li {
+	margin-left: 15px;
+	list-style: circle;
+}
+#subnav_box .children li a {
+	color: #000000 !important;
+	font-size: 11px;
+}
+#sidebarleft_wrapper {
+	float: left;
+}
+#sidebarleft {
+	width: 179px;
+	min-height: 280px;
+	margin: 0;
+	padding: 10px;
+}
+#content {
+	float: left;
+	width: 710px;
+	min-height: 300px;
+	margin: 0;
+	padding: 25px;
+	border-left: solid 1px #cccccc;
+}
+#content_wide, #content_home {
+	float: left;
+	width: 910px;
+	min-height: 300px;
+	_height: 300px;
+	padding: 25px;
+	margin: 0;
+}
+.navigation .alignleft {
+	text-align:left;
+}
+.navigation .alignright {
+	text-align:right;
+}
+#footer {
+	clear: both;
+	width: 940px;
+	padding: 10px;
+	border-top: solid 1px #cccccc;
+	border-bottom: solid 1px #cccccc;
+}
+#footer p {
+	font-size: 11px;
+	margin: 0;
+}
+#spacer {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 20px;
+}
+
+/*** Universal Classes ***/
+
+.centered {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin: 0 0 15px 0;
+}
+.floatleft, .alignleft {
+	float: left;
+}
+.floatright, .alignright {
+	float: right;
+}
+.floatleft_pic {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+.floatright_pic {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+.clearboth, .clear {
+	clear: both;
+}
+.border {
+	border: solid 1px #000000;
+}
+.wp-caption {
+	border: 1px solid #cccccc;
+	text-align: center;
+	background: #f3f3f3;
+	padding: 4px 0 0 0;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	padding: 15px 5px 7px 5px;
+	margin: 0;
+	text-align: left;
+}
+.postmetadata {
+	clear: both;
+	font-size:10px;
+	color:#888;
+	margin-bottom: 15px;
+}

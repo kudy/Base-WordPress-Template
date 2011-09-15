@@ -1,0 +1,11 @@
+/*
+Theme Name: Base WordPress Theme
+Theme URI:
+Description:
+Version: 0.1
+Author: Kevin Udy
+Author URI: http://www.kevinudy.com/
+Tags:
+*/
+@import url("css/reset.css");
+@import url("css/css.css");
