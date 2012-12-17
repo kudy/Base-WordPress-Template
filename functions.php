@@ -1,4 +1,14 @@
 <?php
+/******Let's Create some default menu areas add more if you need to!***/
+	register_nav_menus( array(
+	'top' => 'Top Navigation',
+	'footer' => 'Footer Navigation'
+	) );
+
+add_theme_support( 'post-thumbnails' ); 
+set_post_thumbnail_size( 960, 400, true ); // 960 pixels wide by 400 pixels tall, crop mode
+add_image_size( 'category-thumb', 316, 500, true ); //300 pixels wide (and unlimited height)
+
 function strlen_utf8 ($str) {
 	$i = 0;
 	$count = 0;
@@ -46,31 +56,5 @@ function check_email($email) {
 	}
 	return true;
 }
-add_action('admin_menu', 'sub_menu_function');
-function sub_menu_function() {
-    add_theme_page('Navigation Controls', 'Navigation Controls', 'manage_options', 'navigation_controls', 'navigation_controls_panel');
-}
-function navigation_controls_panel() {
-    if (!current_user_can('manage_options'))  {
-        wp_die( __('You do not have sufficient permissions to access this page.') );
-    }
-    if (isset($_POST['exclude_nav_list'])) {
-	update_option('exclude_nav_list', $_POST['exclude_nav_list']);
-    }
-    if (isset($_POST['include_footer_list'])) {
-	update_option('include_footer_list', $_POST['include_footer_list']);
-    }
-    $exclude_nav_list = get_option('exclude_nav_list');
-    $include_footer_list = get_option('include_footer_list');
-    echo '<div class="wrap"><div id="icon-options-general" class="icon32"></div>
-	    <h2>Navigation Controls</h2>
-	    <form action="" method="post">
-	    <h3>Exclude the following Pages from the Main Navigation:</h3>
-	    <input type="text" size="20" name="exclude_nav_list" value="' . $exclude_nav_list . '" /> (comma separated list of page IDs, ex: 1,3,54,790)<br />
-	    <h3>Include the following Pages in the Footer:</h3>
-	    <input type="text" size="20" name="include_footer_list" value="' . $include_footer_list . '" /> (comma separated list of page IDs, ex: 1,3,54,790)<br /><br />
-	    <input type="submit" value="Save" />
-	    </form>
-    </div>';
-}
+
 ?>
