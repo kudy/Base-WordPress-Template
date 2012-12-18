@@ -19,15 +19,7 @@ wp_head();
 					<a id="logo" href="<?php echo get_permalink('home'); ?>" title=""></a>
 					<div id="navigation_box" role="navigation">
 						<ul id="navigation">
-<?php
-$exclude_nav_list = get_option('exclude_nav_list');
-$arguments = "title_li=&depth=1";
-if ($exclude_nav_list != "") {
-	$arguments .= "&exclude=";
-	$arguments .= $exclude_nav_list;
-}
-wp_list_pages($arguments);
-?>
+								<?php wp_nav_menu( array( 'theme_location' => 'top' ) ); ?>
 						</ul>
 					</div>
 				</div>
