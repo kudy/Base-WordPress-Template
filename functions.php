@@ -1,9 +1,17 @@
 <?php
+<?php
 /******Let's Create some default menu areas add more if you need to!***/
-	register_nav_menus( array(
-	'top' => 'Top Navigation',
-	'footer' => 'Footer Navigation'
+function register_custom_menus() {
+	register_nav_menus( 
+	array(
+		'top' => 'Top Navigation',
+		'footer' => 'Footer Navigation'
 	) );
+}
+	
+	add_action( 'init', 'register_custom_menus' );
+	
+?>
 
 add_theme_support( 'post-thumbnails' ); 
 set_post_thumbnail_size( 960, 400, true ); // 960 pixels wide by 400 pixels tall, crop mode
