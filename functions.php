@@ -1,5 +1,4 @@
 <?php
-<?php
 /******Let's Create some default menu areas add more if you need to!***/
 function register_custom_menus() {
 	register_nav_menus( 
