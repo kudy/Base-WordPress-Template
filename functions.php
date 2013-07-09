@@ -6,13 +6,12 @@ function register_custom_menus() {
 		'top' => 'Top Navigation',
 		'footer' => 'Footer Navigation'
 	) );
-}
-	
-	add_action( 'init', 'register_custom_menus' );
+}	
+add_action('init', 'register_custom_menus');
 
 add_theme_support( 'post-thumbnails' ); 
 set_post_thumbnail_size( 960, 400, true ); // 960 pixels wide by 400 pixels tall, crop mode
-add_image_size( 'category-thumb', 316, 500, true ); //300 pixels wide (and unlimited height)
+add_image_size('category-thumb', 316, 500, true); //300 pixels wide (and unlimited height)
 
 function strlen_utf8 ($str) {
 	$i = 0;
